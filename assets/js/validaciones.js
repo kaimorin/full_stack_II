@@ -204,6 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const btnSiguientePaso = document.getElementById('btnSiguientePaso');
         const selectEspecialidad = document.getElementById('selectEspecialidad');
         
+        
         // Simular selección en los widgets personalizados de fecha/hora
         // En una app real, estos valores se actualizarían al hacer clic en el calendario
         let fechaSeleccionada = "Feb19, 2026"; // Valor inicial simulado

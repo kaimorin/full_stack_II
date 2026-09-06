@@ -1758,6 +1758,31 @@ h1, h2 {
   font-weight: bold;
 }
 
+.tarjeta-metodo input[type="radio"] {
+  display: none;
+}
+
+/* El círculo desmarcado (borde gris oscuro) */
+.circulo-check {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Cuando está seleccionado marca en  negro  */
+input[type="radio"]:checked + .circulo-check::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #222;
+}
+
 /* Responsive para celular */
 @media (max-width: 768px) {
   .contenedor-pago {

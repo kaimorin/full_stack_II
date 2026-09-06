@@ -677,35 +677,66 @@ h1, h2 {
   }
 
 
-/* ================= VISTA LOGIN ================= */
+/* ===================================================
+   VISTA: LOGIN (INICIA SESIÓN)
+   =================================================== */
 
-/* Banner superior con el doctor */
+/* Fondo general de la vista */
+.body-registro {
+  background-color: #f7f9fc;
+}
+
+/* 1. Banner superior centrado con médico */
 .banner-login {
   width: 95%;
   max-width: 1100px;
   height: 200px;
-  margin: 1rem auto;
-  border-radius: 12px;
-  background-image: url('https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=1100&q=80');
-  background-size: cover;
-  background-position: center right;
+  margin: 1.5rem auto;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #ddd;
+}
+
+.img-banner-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center right;
+  z-index: 1;
 }
 
 .banner-titulo-login {
+  position: relative;
+  z-index: 2;
   font-family: 'Caveat', cursive;
-  font-size: 4.8rem;
+  font-size: 5rem;
   color: #0b4b39;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.9);
+  text-align: center;
+  margin: 0;
 }
 
-/* Ancho específico para la tarjeta de login */
+/* 2. Tarjeta contenedora del formulario */
+.seccion-formulario-registro {
+  padding: 1rem 1.5rem 5rem 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
 .caja-login-exacta {
+  background-color: #ffffff;
+  border: 1.5px solid #666;
+  border-radius: 18px;
+  width: 100%;
   max-width: 580px;
-  padding: 3rem 3rem 2.5rem 3rem;
+  padding: 3rem 3.5rem 2.5rem 3.5rem;
 }
 
 .encabezado-caja-login {
@@ -713,14 +744,37 @@ h1, h2 {
   margin-bottom: 2rem;
 }
 
+.logo-degradado {
+  font-family: 'Caveat', cursive;
+  font-size: 4rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #7bb369 0%, #68a3d5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  line-height: 1;
+}
+
 .subtitulo-login {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   color: #222;
-  margin-top: 1rem;
+  margin-top: 0.8rem;
   font-weight: 500;
 }
 
-/* Inputs redondeados con icono a la derecha */
+/* 3. Inputs con icono a la derecha */
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+
+.campo label {
+  font-size: 0.88rem;
+  color: #333;
+  margin-bottom: 0.4rem;
+}
+
 .input-con-icono {
   position: relative;
   display: flex;
@@ -729,11 +783,16 @@ h1, h2 {
 
 .input-con-icono input {
   width: 100%;
-  padding: 0.8rem 2.8rem 0.8rem 1.2rem;
+  padding: 0.8rem 3rem 0.8rem 1.2rem;
   border: 1.5px solid #444;
   border-radius: 25px;
   outline: none;
   font-size: 0.9rem;
+  color: #444;
+}
+
+.input-con-icono input::placeholder {
+  color: #aaa;
 }
 
 .icono-campo {
@@ -744,7 +803,14 @@ h1, h2 {
   pointer-events: none;
 }
 
-/* Enlace Olvidaste tu contraseña */
+.error-texto {
+  font-size: 0.75rem;
+  color: #d32f2f;
+  margin-top: 0.3rem;
+  min-height: 14px;
+}
+
+/* 4. Enlace Olvidaste tu contraseña */
 .link-olvido-negrita {
   display: inline-block;
   font-size: 0.88rem;
@@ -758,7 +824,7 @@ h1, h2 {
   text-decoration: underline;
 }
 
-/* Switch Toggle Recuerdame */
+/* 5. Switch Toggle Recuerdame */
 .fila-switch {
   display: flex;
   align-items: center;
@@ -830,7 +896,7 @@ h1, h2 {
   font-weight: 500;
 }
 
-/* Botón Ingresar negro redondeado */
+/* 6. Botones Ingresar y Google */
 .btn-ingresar-negro {
   width: 100%;
   background-color: #000000;
@@ -849,7 +915,6 @@ h1, h2 {
   background-color: #222;
 }
 
-/* Botón Google Login */
 .btn-google-login {
   width: 100%;
   background-color: #ffffff;
@@ -866,7 +931,7 @@ h1, h2 {
   margin-bottom: 1.5rem;
 }
 
-/* Enlace a Registro */
+/* 7. Enlace a Registro */
 .pie-login-registro {
   text-align: center;
   font-size: 0.88rem;
@@ -878,4 +943,249 @@ h1, h2 {
   color: #1a73e8;
   text-decoration: underline;
 }
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .caja-login-exacta {
+    padding: 2rem 1.5rem;
+  }
+  .banner-titulo-login {
+    font-size: 3.5rem;
+  }
 }
+}
+
+/* ================= VISTA AGENDA ================= */
+
+/* Banner de la foto */
+.banner-agenda {
+  width: 95%;
+  max-width: 1100px;
+  height: 190px;
+  margin: 1.5rem auto 1rem auto;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.banner-agenda img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  display: block;
+}
+
+/* Barra de pasos */
+.pasos-agenda {
+  max-width: 1100px;
+  margin: 1.5rem auto;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.8rem;
+  color: #888;
+}
+
+.paso-activo {
+  color: #222;
+  font-weight: bold;
+  border-bottom: 2px solid #333;
+}
+
+/* Distribución en 2 columnas */
+.contenedor-agenda {
+  max-width: 1100px;
+  margin: 0 auto 4rem auto;
+  display: flex;
+  gap: 2rem;
+}
+
+.columna-doctores {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.columna-picker {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Tarjetas de Doctores */
+.tarjeta-radio-doc {
+  border: 1.5px solid #666;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+.tarjeta-radio-doc strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.tarjeta-radio-doc p {
+  font-size: 0.8rem;
+  color: #555;
+  line-height: 1.3;
+}
+
+/* Presencial / Online */
+.fila-modalidad {
+  display: flex;
+  gap: 1rem;
+}
+
+.tarjeta-radio-modalidad {
+  flex: 1;
+  border: 1.5px solid #666;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* Select especialidad */
+.campo-select-esp select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #666;
+  border-radius: 6px;
+  background: #fff;
+}
+
+/* Botones Siguiente y Volver */
+.fila-botones-paso {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.btn-siguiente-paso {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-volver-paso {
+  background: #fff;
+  color: #333;
+  border: 1.5px solid #555;
+  padding: 0.6rem 1.8rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* Widgets Calendario y Hora (Verdes) */
+.resumen-pildoras {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.pildora-tag {
+  background: #e2e8f0;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+}
+
+.widget-calendario {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.cal-barra-dia {
+  background: #c9e2b9;
+  padding: 0.35rem 1rem;
+  font-size: 0.85rem;
+  color: #1f3b14;
+}
+
+.cal-cabecera-mes {
+  background: #2a5a25;
+  color: #fff;
+  padding: 0.8rem 1rem;
+}
+
+.cal-dia-numero {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.cal-cuerpo {
+  padding: 1rem;
+}
+
+.cal-dias-semana, .cal-matriz-numeros {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.dia-marcado {
+  background: #2a5a25;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.dia-apagado {
+  color: #bbb;
+}
+
+.cal-acciones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  padding: 0.5rem 1rem;
+}
+
+.widget-hora {
+  background: #2e5c26;
+  color: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.hora-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.hora-selector-rueda {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.col-rueda {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.op-rueda.apagado { opacity: 0.4; }
+.op-rueda.activa { font-size: 1.2rem; font-weight: bold; }

@@ -1282,6 +1282,263 @@ h1, h2 {
   .btn-volver-inicio {
     width: 100%;
     text-align: center;
-    padding: 0.75rem;
+    padding: 0.75rem;}
+}
+
+
+/* ================= VISTA PERFIL / MI CUENTA ================= */
+
+.txt-bienvenido-nav {
+  font-size: 0.95rem;
+  color: #444;
+  font-weight: 500;
+}
+
+/* Banner superior con fondo celeste y cápsula rosada */
+.banner-perfil-contenedor {
+  background-color: #dff4fc;
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+}
+
+.banner-perfil {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.capsula-frase-perfil {
+  background: #fde8ed;
+  border-radius: 90px;
+  padding: 2.5rem 3rem;
+  flex: 1;
+  max-width: 480px;
+}
+
+.frase-perfil-cursiva {
+  font-family: 'Caveat', cursive;
+  font-size: 3.2rem;
+  line-height: 1.15;
+  color: #2f2e41;
+}
+
+.banner-perfil-img-box {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.img-banner-perfil {
+  max-width: 450px;
+  width: 100%;
+  border-radius: 120px 120px 100px 100px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Layout General: Sidebar + Panel */
+.contenedor-perfil {
+  max-width: 1200px;
+  margin: 0 auto 5rem;
+  display: flex;
+  gap: 3rem;
+  padding: 0 1.5rem;
+}
+
+/* Sidebar Gris */
+.sidebar-cuenta {
+  width: 250px;
+  background-color: #ededed;
+  padding: 2rem 1.5rem;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+.menu-cuenta {
+  display: flex;
+  flex-direction: column;
+}
+
+.link-menu-cuenta {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #111;
+  text-decoration: none;
+  margin-bottom: 1.2rem;
+}
+
+.link-menu-cuenta.activo {
+  text-decoration: underline;
+}
+
+.separador-cuenta {
+  border: none;
+  border-top: 1.5px solid #777;
+  margin: 0.8rem 0 1.2rem;
+}
+
+.sublink-cuenta {
+  font-size: 0.9rem;
+  color: #333;
+  text-decoration: none;
+  margin-bottom: 0.9rem;
+}
+
+.sublink-cuenta:hover {
+  text-decoration: underline;
+}
+
+.bloque-cerrar-sesion {
+  margin-top: 2rem;
+}
+
+.btn-cerrar-sesion {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Panel Derecho */
+.panel-cuenta {
+  flex: 1;
+}
+
+.titulo-bienvenida {
+  font-family: 'Caveat', cursive;
+  font-size: 3.6rem;
+  color: #222;
+  margin-bottom: 2rem;
+}
+
+.grid-info-cuenta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.tarjeta-info h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.6rem;
+  color: #111;
+}
+
+.tarjeta-info p {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.link-accion-gris {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #888;
+  text-decoration: none;
+  margin-top: 0.6rem;
+}
+
+.link-accion-gris:hover {
+  text-decoration: underline;
+}
+
+.info-personal-bloque {
+  grid-column: 1 / -1;
+}
+
+/* Cabecera Mis Solicitudes */
+.cabecera-solicitudes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.cabecera-solicitudes h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #111;
+}
+
+.caja-buscar-id input {
+  padding: 0.45rem 1.4rem;
+  border-radius: 20px;
+  border: 1.5px solid #333;
+  outline: none;
+  font-size: 0.85rem;
+}
+
+/* Tabla de Citas */
+.tabla-solicitudes-contenedor {
+  border: 1.5px solid #222;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.tabla-solicitudes {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.tabla-solicitudes th,
+.tabla-solicitudes td {
+  padding: 1.1rem 1.2rem;
+  font-size: 0.88rem;
+}
+
+.tabla-solicitudes th {
+  font-weight: bold;
+  color: #111;
+}
+
+.tabla-solicitudes tbody tr {
+  border-top: 1px solid #eee;
+}
+
+.td-mas {
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+  color: #444;
+}
+
+.btn-editar-solicitudes {
+  background-color: #222;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 2rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Responsive Perfil */
+@media (max-width: 900px) {
+  .banner-perfil {
+    flex-direction: column;
+    text-align: center;
   }
+  .contenedor-perfil {
+    flex-direction: column;
+  }
+  .sidebar-cuenta {
+    width: 100%;
+  }
+  .grid-info-cuenta {
+    grid-template-columns: 1fr;
+  }
+  .tabla-solicitudes-contenedor {
+    overflow-x: auto;
+  }
+}
 }

@@ -1990,4 +1990,3 @@ input[type="radio"]:checked + .circulo-check::after {
     width: 100%;
   }
 }
-}

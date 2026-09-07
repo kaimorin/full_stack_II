@@ -1996,3 +1996,245 @@ input[type="radio"]:checked + .circulo-check::after {
 .tarjeta-metodo input[type="radio"] {
     display: none; 
 }
+/* ================= DASHBOARD ADMINISTRACIÓN ================= */
+
+.body-dashboard {
+  margin: 0;
+  padding: 0;
+  background-color: #f6f7f9;
+  font-family: 'Inter', sans-serif;
+  color: #222;
+}
+
+.layout-dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar-admin {
+  width: 240px;
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  flex-shrink: 0;
+}
+
+.logo-admin a {
+  font-family: 'Caveat', cursive;
+  font-size: 2.2rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-admin {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.item-admin {
+  color: #aaa;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.item-admin:hover,
+.item-admin.activo {
+  background-color: #333;
+  color: #fff;
+}
+
+.admin-logout {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid #3a3a3a;
+}
+
+.link-logout {
+  color: #ea6b6b;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+/* Panel Principal */
+.main-dashboard {
+  flex: 1;
+  padding: 2rem 2.5rem;
+  overflow-y: auto;
+}
+
+.topbar-admin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.saludo-admin {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.subtitulo-admin {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.2rem;
+}
+
+.buscador-admin input {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  width: 260px;
+  outline: none;
+  font-size: 0.88rem;
+}
+
+/* Métricas / Cards */
+.grid-metricas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.tarjeta-metrica {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label-metrica {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.valor-metrica {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #111;
+}
+
+/* Tabla de Gestión */
+.seccion-tabla-admin {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.cabecera-tabla-admin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.cabecera-tabla-admin h2 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.btn-nueva-cita {
+  background-color: #222;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.tabla-admin-contenedor {
+  overflow-x: auto;
+}
+
+.tabla-admin {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.tabla-admin th,
+.tabla-admin td {
+  padding: 0.9rem 1rem;
+  font-size: 0.9rem;
+}
+
+.tabla-admin th {
+  background-color: #fafafa;
+  color: #555;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.tabla-admin td {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Badges de estado */
+.badge {
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.badge-progreso {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.badge-pendiente {
+  background-color: #fff3e0;
+  color: #f57c00;
+}
+
+.badge-finalizado {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.btn-accion-tabla {
+  background: transparent;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  font-size: 0.82rem;
+}
+
+/* Responsive Dashboard */
+@media (max-width: 900px) {
+  .layout-dashboard {
+    flex-direction: column;
+  }
+  .sidebar-admin {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .main-dashboard {
+    padding: 1.5rem;
+  }
+  .topbar-admin {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .buscador-admin input {
+    width: 100%;
+  }
+}

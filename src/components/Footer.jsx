@@ -1,3 +1,8 @@
+
+import imgWs from '../assets/ws.png';
+import ig from '../assets/ig.png'
+import fb from '../assets/fb.png'
+
 function Footer() {
     return (<footer className="footer-rosado">
     <div className="footer-rosado-contenido">
@@ -11,13 +16,13 @@ function Footer() {
         <div className="redes-con-texto">
             <div className="redes-iconos">
   <a href="https://wa.me/56912345678" target="_blank" className="icono-rd">
-    <img src="assets/imagenes/ws.png" alt="WhatsApp"/>
+    <img src={imgWs} alt="WhatsApp"/>
   </a>
   <a href="https://facebook.com" target="_blank" className="icono-rd">
-    <img src="assets/imagenes/fb.png" alt="Facebook"/>
+    <img src={fb} alt="Facebook"/>
   </a>
   <a href="https://instagram.com" target="_blank" className="icono-rd">
-    <img src="assets/imagenes/ig.png" alt="Instagram"/>
+    <img src={ig} alt="Instagram"/>
   </a>
 </div>
 

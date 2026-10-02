@@ -1,17 +1,19 @@
+import{Link, NavLink} from 'react-router'
+
 function Header() {
   return (
    <header className="header">
-    <a href="index.html" class="logo">NUTRIVIDA</a>
+    <Link to="/" className="logo">NUTRIVIDA</Link>
     <nav className="nav">
       <ul>
-        <li><a href="#servicios">Servicios</a></li>
+        <li><NavLink to="/servicios">Servicios</NavLink></li>
         <li className="separador">|</li>
-        <li><a href="#profesionales">Profesionales</a></li>
+        <li><NavLink to="/profesionales">Profesionales</NavLink></li>
         <li className="separador">|</li>
-        <li><a href="registro.html">Mi Salud</a></li>
+        <li><NavLink to="/registro">Mi Salud</NavLink></li>
       </ul>
     </nav>
-    <a href="registro.html" className="btn-agenda">Agenda ahora</a>
+    <Link to="/agenda" className="btn-agenda">Agenda ahora</Link>
   </header>
   )
 }

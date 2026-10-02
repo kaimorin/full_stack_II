@@ -1,4 +1,4 @@
-import banner from '../assets/imagenes/banner-paso1.jpg'
+import banner from '../assets/banner-paso1.jpg'
 
 function Datos() {
         return(  

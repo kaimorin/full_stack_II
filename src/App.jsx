@@ -8,6 +8,7 @@ import Agenda from './pages/Agenda.jsx'
 // not found page - 404
 import NotFound from './pages/NotFound.jsx'
 import './App.css'
+import Datos from './pages/Datos.jsx'
 
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="agenda" element={<Agenda />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="datos" element={<Datos />} />
       </Route>
     </Routes>
   )

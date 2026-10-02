@@ -8,7 +8,7 @@ import Agenda from './pages/Agenda.jsx'
 // not found page - 404
 import NotFound from './pages/NotFound.jsx'
 import './App.css'
-import Datos from './components/Datos.jsx'
+import Datos from './pages/Datos.jsx'
 
 
 export default function App() {

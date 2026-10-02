@@ -1,3 +1,11 @@
+import fotoFamiliar from '../assets/familia.jpg'
+import fotoPeso from '../assets/servicio-peso.jpg'
+import fotoInfantil from '../assets/servicio-infantil.jpg'
+import fotoDeporte from '../assets/servicio-deporte.jpg'
+import fotoMaria from '../assets/pro-maria.jpg'
+import fotoMaximo from '../assets/pro-maximo.jpg'
+import ye from '../assets/drwest.jpg'
+
 function Home() {
     return(<main>
     <section className="hero">
@@ -11,7 +19,7 @@ function Home() {
         </div>
       </div>
       <div className="hero-img">
-        <img src="assets/imagenes/familia.jpg" alt="Familia preparando comida saludable"/>
+        <img src={fotoFamiliar} alt="Familia preparando comida saludable"/>
       </div>
     </section>
    <div className="linea-division"></div>
@@ -24,7 +32,7 @@ function Home() {
       <div className="servicios-grid">
         <article className="tarjeta-servicio">
           <div className="img-servicio">
-            <img src="assets/imagenes/servicio-peso.jpg" alt="Control de peso"/>
+            <img src={fotoPeso} alt="Control de peso"/>
           </div>
           <h4>Control de peso</h4>
           <p>Hábitos sostenibles para composición corporal y bienestar.</p>
@@ -33,7 +41,7 @@ function Home() {
 
         <article className="tarjeta-servicio">
           <div className="img-servicio">
-            <img src="assets/imagenes/servicio-infantil.jpg" alt="Nutrición infantil"/>
+            <img src={fotoInfantil} alt="Nutrición infantil"/>
           </div>
           <h4>Nutricion infantil</h4>
           <p>Hábitos saludables para niños y niñas desde los 5 años.</p>
@@ -42,7 +50,7 @@ function Home() {
 
         <article className="tarjeta-servicio">
           <div className="img-servicio">
-            <img src="assets/imagenes/servicio-deporte.jpg" alt="Nutrición deportiva"/>
+            <img src={fotoDeporte} alt="Nutrición deportiva"/>
           </div>
           <h4>Nutricion Deportiva</h4>
           <p>Rendimiento, recuperación e hidratación con pauta personalizada.</p>
@@ -63,7 +71,7 @@ function Home() {
         <div className="grid-profesionales">
           <article className="tarjeta-pro">
             <div className="avatar-pro">
-              <img src="assets/imagenes/pro-maria.jpg" alt="Maria De Judas"/>
+              <img src={fotoMaria} alt="Maria De Judas"/>
             </div>
             <h4>Maria De Judas</h4>
             <p>Especialista en nutrición deportiva y recomposición corporal. Su enfoque se centra en crear hábitos sostenibles y planes de alimentación que mejoran el rendimiento físico sin dietas restrictivas.</p>
@@ -71,7 +79,7 @@ function Home() {
 
           <article className="tarjeta-pro">
             <div className="avatar-pro">
-              <img src="assets/imagenes/pro-maximo.jpg" alt="Maximo Tul'Onazo"/>
+              <img src={fotoMaximo} alt="Maximo Tul'Onazo"/>
             </div>
             <h4>Maximo Tul´Onazo</h4>
             <p>Experto en nutrición clínica y metabólica. Se dedica al tratamiento integral del sobrepeso, la obesidad y el control de enfermedades crónicas, como la diabetes, a través de la alimentación.</p>
@@ -79,9 +87,9 @@ function Home() {
 
           <article className="tarjeta-pro">
             <div className="avatar-pro">
-              <img src="assets/imagenes/images.jpg" alt="Mario Di West"/>
+              <img src={ye} alt="Kanye Di West"/>
             </div>
-            <h4>Mario Di West</h4>
+            <h4>Kanye Di West</h4>
             <p>Especializado en salud digestiva y nutrición integrativa. Su trabajo busca restaurar el equilibrio de la microbiota intestinal y alimentarias para mejorar la calidad de vida.</p>
           </article>
         </div>

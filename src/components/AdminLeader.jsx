@@ -1,18 +1,27 @@
+import { Link, NavLink } from 'react-router'
+
 function AdminLeader() {
-    return(<aside class="sidebar-admin">
-      <div class="logo-admin">
-        <a href="index.html">NUTRIVIDA</a>
+  const clase = ({ isActive }) => (isActive ? 'item-admin activo' : 'item-admin')
+
+  return (
+    <aside className="sidebar-admin">
+      <div className="logo-admin">
+        <Link to="/">NUTRIVIDA</Link>
       </div>
-      <nav class="nav-admin">
-        <a href="#" class="item-admin activo">Dashboard</a>
-        <a href="#" class="item-admin">Citas y Horarios</a>
-        <a href="#" class="item-admin">Pacientes</a>
-        <a href="#" class="item-admin">Especialistas</a>
-        <a href="#" class="item-admin">Reportes y Pagos</a>
+
+      <nav className="nav-admin">
+        <NavLink to="/admin" end className={clase}>Dashboard</NavLink>
+        <NavLink to="/admin/citas" className={clase}>Citas y Horarios</NavLink>
+        <NavLink to="/admin/pacientes" className={clase}>Pacientes</NavLink>
+        <NavLink to="/admin/especialistas" className={clase}>Especialistas</NavLink>
+        <NavLink to="/admin/reportes" className={clase}>Reportes y Pagos</NavLink>
       </nav>
-      <div class="admin-logout">
-        <a href="login.html" class="link-logout">Cerrar Sesión</a>
+
+      <div className="admin-logout">
+        <Link to="/login" className="link-logout">Cerrar Sesión</Link>
       </div>
-    </aside>)
+    </aside>
+  )
 }
-export default AdminLeader;
+
+export default AdminLeader

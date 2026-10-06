@@ -7,6 +7,7 @@ import LayoutAdmin from './components/LayoutAdmin.jsx'
 import Home from './pages/Home.jsx'
 import Agenda from './pages/Agenda.jsx'
 import Datos from './pages/Datos.jsx'
+import Pago from './pages/Pago.jsx'
 import Login from './pages/Login.jsx'
 import Registro from './pages/Registro.jsx'
 import Perfil from './pages/Perfil.jsx'
@@ -27,6 +28,7 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="agenda" element={<Agenda />} />
         <Route path="datos" element={<Datos />} />
+        <Route path="pago" element={<Pago />} />
         <Route path="login" element={<Login />} />
         <Route path="registro" element={<Registro />} />
         <Route path="perfil" element={<Perfil />} />
@@ -41,7 +43,7 @@ export default function App() {
         <Route path="especialistas" element={<Especialistas />} />
         <Route path="reportes" element={<Reportes />} />
       </Route>
-      
+      {/* panel agenda */}
     </Routes>
   )
 }

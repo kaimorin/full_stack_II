@@ -3,11 +3,13 @@ import { Route, Routes } from 'react-router'
 // layouts
 import Layout from './components/Layout.jsx'
 import LayoutAdmin from './components/LayoutAdmin.jsx'
-// pages
+// pages públicas
 import Home from './pages/Home.jsx'
 import Agenda from './pages/Agenda.jsx'
 import Datos from './pages/Datos.jsx'
-// not found page - 404
+import Login from './pages/Login.jsx'
+import Registro from './pages/Registro.jsx'
+import Perfil from './pages/Perfil.jsx'
 import NotFound from './pages/NotFound.jsx'
 // pages admin
 import Dashboard from './pages/Dashboard.jsx'
@@ -16,9 +18,6 @@ import Pacientes from './pages/Pacientes.jsx'
 import Especialistas from './pages/Especialistas.jsx'
 import Reportes from './pages/Reportes.jsx'
 import './App.css'
-import Datos from './pages/Datos.jsx'
-import LayoutAdmin from './components/LayoutAdmin.jsx'
-import Dashboard from './pages/Dashboard.jsx'
 
 export default function App() {
   return (
@@ -28,11 +27,10 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="agenda" element={<Agenda />} />
         <Route path="datos" element={<Datos />} />
+        <Route path="login" element={<Login />} />
+        <Route path="registro" element={<Registro />} />
+        <Route path="perfil" element={<Perfil />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="datos" element={<Datos />} />
-      </Route>
-      <Route path="admin" element={<LayoutAdmin />}>
-        <Route index element={<Dashboard />} />
       </Route>
 
       {/* panel admin */}

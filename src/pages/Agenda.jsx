@@ -1,8 +1,11 @@
+import calendario1 from '../assets/banner-agenda.jpg'
+
+
 function Agenda() {
     return(<main>
     
     <section className="banner-agenda">
-      <img src="assets/imagenes/banner-agenda.jpg" alt="Calendario" className="img-banner-agenda"/>
+      <img src={calendario1} className="img-banner-agenda"/>
     </section>
 
     

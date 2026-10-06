@@ -16,6 +16,9 @@ import Pacientes from './pages/Pacientes.jsx'
 import Especialistas from './pages/Especialistas.jsx'
 import Reportes from './pages/Reportes.jsx'
 import './App.css'
+import Datos from './pages/Datos.jsx'
+import LayoutAdmin from './components/LayoutAdmin.jsx'
+import Dashboard from './pages/Dashboard.jsx'
 
 export default function App() {
   return (
@@ -26,6 +29,10 @@ export default function App() {
         <Route path="agenda" element={<Agenda />} />
         <Route path="datos" element={<Datos />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="datos" element={<Datos />} />
+      </Route>
+      <Route path="admin" element={<LayoutAdmin />}>
+        <Route index element={<Dashboard />} />
       </Route>
 
       {/* panel admin */}

@@ -41,6 +41,7 @@ export default function App() {
         <Route path="especialistas" element={<Especialistas />} />
         <Route path="reportes" element={<Reportes />} />
       </Route>
+      
     </Routes>
   )
 }

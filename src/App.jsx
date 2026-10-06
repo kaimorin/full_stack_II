@@ -43,7 +43,11 @@ export default function App() {
         <Route path="especialistas" element={<Especialistas />} />
         <Route path="reportes" element={<Reportes />} />
       </Route>
+<<<<<<< HEAD
       {/* panel agenda */}
+=======
+      
+>>>>>>> 40026566f24d0f2f581cdddb8155efb0d1c1ded8
     </Routes>
   )
 }

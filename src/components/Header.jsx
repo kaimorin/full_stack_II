@@ -13,7 +13,7 @@ function Header() {
         <li><NavLink to="/registro">Mi Salud</NavLink></li>
       </ul>
     </nav>
-    <Link to="/agenda" className="btn-agenda">Agenda ahora</Link>
+    <Link to="/datos" className="btn-agenda">Agenda ahora</Link>
   </header>
   )
 }

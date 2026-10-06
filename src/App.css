@@ -446,6 +446,7 @@ h1, h2 {
   font-weight: bold;
   background: linear-gradient(90deg, #7bb369 0%, #68a3d5 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
   line-height: 1;
@@ -750,6 +751,7 @@ h1, h2 {
   font-weight: bold;
   background: linear-gradient(90deg, #7bb369 0%, #68a3d5 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
   line-height: 1;

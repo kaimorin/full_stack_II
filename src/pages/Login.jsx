@@ -1,8 +1,11 @@
+import imagen1 from '../assets/banner-login.jpg'
+
+
 function Login() {
     return(<main>
     
     <section className="banner-login">
-      <img src="assets/imagenes/banner-login.jpg" alt="Doctor" className="img-banner-fondo"/>
+      <img src={imagen1}className="img-banner-fondo"/>
       <h1 className="banner-titulo-login">Inicia Sesion</h1>
     </section>
 

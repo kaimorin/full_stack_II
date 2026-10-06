@@ -1,17 +1,19 @@
 // dependencies
-import { Route, Routes } from 'react-router'
+import { Navigate, Route, Routes } from 'react-router'
 // layouts
 import Layout from './components/Layout.jsx'
+import LayoutReserva from './components/LayoutReserva.jsx'
 import LayoutAdmin from './components/LayoutAdmin.jsx'
 // pages públicas
 import Home from './pages/Home.jsx'
-import Agenda from './pages/Agenda.jsx'
-import Datos from './pages/Datos.jsx'
-import Pago from './pages/Pago.jsx'
 import Login from './pages/Login.jsx'
 import Registro from './pages/Registro.jsx'
 import Perfil from './pages/Perfil.jsx'
 import NotFound from './pages/NotFound.jsx'
+// pages reserva
+import Agenda from './pages/Agenda.jsx'
+import Datos from './pages/Datos.jsx'
+import Pago from './pages/Pago.jsx'
 // pages admin
 import Dashboard from './pages/Dashboard.jsx'
 import CitasHorario from './pages/CitasHorario.jsx'
@@ -26,13 +28,18 @@ export default function App() {
       {/* sitio público */}
       <Route element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="agenda" element={<Agenda />} />
-        <Route path="datos" element={<Datos />} />
-        <Route path="pago" element={<Pago />} />
         <Route path="login" element={<Login />} />
         <Route path="registro" element={<Registro />} />
         <Route path="perfil" element={<Perfil />} />
         <Route path="*" element={<NotFound />} />
+      </Route>
+
+      {/* reserva de citas */}
+      <Route path="reserva" element={<LayoutReserva />}>
+        <Route index element={<Navigate to="/reserva/agenda" replace />} />
+        <Route path="agenda" element={<Agenda />} />
+        <Route path="datos" element={<Datos />} />
+        <Route path="pago" element={<Pago />} />
       </Route>
 
       {/* panel admin */}
@@ -43,11 +50,6 @@ export default function App() {
         <Route path="especialistas" element={<Especialistas />} />
         <Route path="reportes" element={<Reportes />} />
       </Route>
-<<<<<<< HEAD
-      {/* panel agenda */}
-=======
-      
->>>>>>> 40026566f24d0f2f581cdddb8155efb0d1c1ded8
     </Routes>
   )
 }

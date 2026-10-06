@@ -3,11 +3,19 @@ function Perfil(){
     <main class="contenedor-perfil">
     
   
+<<<<<<< Updated upstream
         <aside class="sidebar-cuenta"/>
         <nav class="menu-cuenta"/>
         <a href="#mi-cuenta" class="link-menu-cuenta activo">Mi Cuenta</a>
         <a href="#solicitudes" class="link-menu-cuenta">Mis Solicitudes</a>
         <a href="#tratamientos" class="link-menu-cuenta">Tratamientos</a>
+=======
+        <aside className="sidebar-cuenta"/>
+        <nav className="menu-cuenta"/>
+        <a href="#mi-cuenta" className="link-menu-cuenta activo">Mi Cuenta</a>
+        <a href="#solicitudes" className="link-menu-cuenta">Mis Solicitudes</a>
+        <a href="#tratamientos" className="link-menu-cuenta">Tratamientos</a>
+>>>>>>> Stashed changes
         
         <hr class="separador-cuenta"/>
 

@@ -1,45 +1,45 @@
 function Dashboard() {
-    return(<main class="main-dashboard">
+    return(<main className="main-dashboard">
       
-      <header class="topbar-admin">
+      <header className="topbar-admin">
         <div>
-          <h1 class="saludo-admin">Panel General</h1>
-          <p class="subtitulo-admin">Bienvenido de vuelta, Dr. Administrador</p>
+          <h1 className="saludo-admin">Panel General</h1>
+          <p className="subtitulo-admin">Bienvenido de vuelta, Dr. Administrador</p>
         </div>
-        <div class="buscador-admin">
+        <div className="buscador-admin">
           <input type="text" placeholder="Buscar paciente, RUT o ID..."/>
         </div>
       </header>
 
       
-      <section class="grid-metricas">
-        <div class="tarjeta-metrica">
-          <span class="label-metrica">Citas de Hoy</span>
-          <span class="valor-metrica">18</span>
+      <section className="grid-metricas">
+        <div className="tarjeta-metrica">
+          <span className="label-metrica">Citas de Hoy</span>
+          <span className="valor-metrica">18</span>
         </div>
-        <div class="tarjeta-metrica">
-          <span class="label-metrica">Pacientes Activos</span>
-          <span class="valor-metrica">1,240</span>
+        <div className="tarjeta-metrica">
+          <span className="label-metrica">Pacientes Activos</span>
+          <span className="valor-metrica">1,240</span>
         </div>
-        <div class="tarjeta-metrica">
-          <span class="label-metrica">Ingresos del Mes</span>
-          <span class="valor-metrica">$1,450,000</span>
+        <div className="tarjeta-metrica">
+          <span className="label-metrica">Ingresos del Mes</span>
+          <span className="valor-metrica">$1,450,000</span>
         </div>
-        <div class="tarjeta-metrica">
-          <span class="label-metrica">Pendientes de Pago</span>
-          <span class="valor-metrica">4</span>
+        <div className="tarjeta-metrica">
+          <span className="label-metrica">Pendientes de Pago</span>
+          <span className="valor-metrica">4</span>
         </div>
       </section>
 
      
-      <section class="seccion-tabla-admin">
-        <div class="cabecera-tabla-admin">
+      <section className="seccion-tabla-admin">
+        <div className="cabecera-tabla-admin">
           <h2>Próximas Citas Médicas</h2>
-          <button class="btn-nueva-cita">+ Nueva Cita</button>
+          <button className="btn-nueva-cita">+ Nueva Cita</button>
         </div>
 
-        <div class="tabla-admin-contenedor">
-          <table class="tabla-admin">
+        <div className="tabla-admin-contenedor">
+          <table className="tabla-admin">
             <thead>
               <tr>
                 <th>Paciente</th>
@@ -56,24 +56,24 @@ function Dashboard() {
                 <td>Dra. Maria de Judas</td>
                 <td>Control de Peso</td>
                 <td>19 Feb - 09:30 AM</td>
-                <td><span class="badge badge-progreso">Confirmado</span></td>
-                <td><button class="btn-accion-tabla">Ver</button></td>
+                <td><span className="badge badge-progreso">Confirmado</span></td>
+                <td><button className="btn-accion-tabla">Ver</button></td>
               </tr>
               <tr>
                 <td>Elena Rostova</td>
                 <td>Dr. Maximo Tul´Onazo</td>
                 <td>Dieta Personalizada</td>
                 <td>19 Feb - 10:15 AM</td>
-                <td><span class="badge badge-pendiente">Pendiente</span></td>
-                <td><button class="btn-accion-tabla">Ver</button></td>
+                <td><span className="badge badge-pendiente">Pendiente</span></td>
+                <td><button className="btn-accion-tabla">Ver</button></td>
               </tr>
               <tr>
                 <td>Lucas Gómez</td>
                 <td>Dra. Maria de Judas</td>
                 <td>Evaluación InBody</td>
                 <td>19 Feb - 11:00 AM</td>
-                <td><span class="badge badge-finalizado">Atendido</span></td>
-                <td><button class="btn-accion-tabla">Ver</button></td>
+                <td><span className="badge badge-finalizado">Atendido</span></td>
+                <td><button className="btn-accion-tabla">Ver</button></td>
               </tr>
             </tbody>
           </table>

@@ -11,10 +11,15 @@ import ye from '../assets/drwest.jpg'
 function Home() {
     const location = useLocation()
     useEffect(() => {
-        if (location.hash) {
-            document.getElementById(location.hash.slice(1))?.scrollIntoView()
-        }
+        const id = location.state?.ir
+        if (id) document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
     }, [location])
+
+    function irA(e, id) {
+        e.preventDefault()
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    }
+
     return(<main>
     <section className="hero">
       <div className="hero-info">
@@ -22,8 +27,8 @@ function Home() {
         <h3>Clinica Nutrivida</h3>
         <p>Planes personalizados y acompañamiento médico para que alcances tu bienestar físico y mental.</p>
         <div className="hero-botones">
-          <a href="#profesionales" className="btn-verde">Profesionales</a>
-          <a href="#nosotros" className="btn-rosa">Nosotros</a>
+          <a href="#profesionales" className="btn-verde" onClick={(e) => irA(e, 'profesionales')}>Profesionales</a>
+          <a href="#nosotros" className="btn-rosa" onClick={(e) => irA(e, 'nosotros')}>Nosotros</a>
         </div>
       </div>
       <div className="hero-img">
@@ -44,7 +49,7 @@ function Home() {
           </div>
           <h4>Control de peso</h4>
           <p>Hábitos sostenibles para composición corporal y bienestar.</p>
-          <a href="agenda.html" className="btn-detalle">Detalles</a>
+          <Link to="/reserva/datos" className="btn-detalle">Detalles</Link>
         </article>
 
         <article className="tarjeta-servicio">
@@ -53,7 +58,7 @@ function Home() {
           </div>
           <h4>Nutricion infantil</h4>
           <p>Hábitos saludables para niños y niñas desde los 5 años.</p>
-          <a href="agenda.html" className="btn-detalle">Detalles</a>
+          <Link to="/reserva/datos" className="btn-detalle">Detalles</Link>
         </article>
 
         <article className="tarjeta-servicio">
@@ -62,7 +67,7 @@ function Home() {
           </div>
           <h4>Nutricion Deportiva</h4>
           <p>Rendimiento, recuperación e hidratación con pauta personalizada.</p>
-          <a href="agenda.html" className="btn-detalle">Detalles</a>
+          <Link to="/reserva/datos" className="btn-detalle">Detalles</Link>
         </article>
       </div>
     </section>

@@ -1,6 +1,15 @@
+import { Link, useNavigate } from 'react-router'
 import banner from '../assets/banner-paso1.jpg'
 
 function Datos() {
+    const navigate = useNavigate()
+
+    function siguiente(e) {
+        e.preventDefault()
+        const datos = Object.fromEntries(new FormData(e.currentTarget))
+        sessionStorage.setItem('datosPaciente', JSON.stringify(datos))
+        navigate('/reserva/agenda')
+    }
         return(  
     <main>
         
@@ -19,7 +28,7 @@ function Datos() {
         <section className="contenedor-formulario-paso1">
             <h2 className="titulo-datos-paciente">Datos del Paciente:</h2>
 
-            <form action="agenda-paso2.html" method="GET" className="form-paso1" id="formPaso1">
+            <form onSubmit={siguiente} className="form-paso1" id="formPaso1">
                 <div className="fila-inputs-paso1">
                     <input type="text" name="nombre" placeholder="Nombre*" required className="input-paso1" />
                     <input type="text" name="apellido" placeholder="Apellido*" required className="input-paso1" />
@@ -27,13 +36,13 @@ function Datos() {
 
                 <div className="fila-inputs-paso1">
                     <input type="text" name="rut" placeholder="RUT" required className="input-paso1" />
-                    <input type="tel" name="telefono" value="+56 9" className="input-paso1" />
+                    <input type="tel" name="telefono" defaultValue="+56 9" className="input-paso1" />
                 </div>
 
                 <div className="fila-inputs-paso1">
                     <div className="select-wrapper-paso1">
-                        <select name="comuna" className="input-paso1 select-paso1" required>
-                            <option value="" disabled selected>Comuna*</option>
+                        <select name="comuna" defaultValue="" className="input-paso1 select-paso1" required>
+                            <option value="" disabled>Comuna*</option>
                             <option value="santiago">Santiago</option>
                             <option value="providencia">Providencia</option>
                             <option value="las-condes">Las Condes</option>
@@ -67,7 +76,7 @@ function Datos() {
 
                 <div className="fila-botones-accion-paso1">
                     <button type="submit" className="btn-siguiente-paso1">Siguiente</button>
-                    <a href="index.html" className="btn-volver-paso1">Volver</a>
+                    <Link to="/" className="btn-volver-paso1">Volver</Link>
                 </div>
             </form>
         </section>

@@ -1,12 +1,7 @@
-import { Link, useNavigate } from 'react-router'
+import { Link } from "react-router"
 
 function Registro(){
-    const navigate = useNavigate()
 
-    function registrarme(e) {
-        e.preventDefault()
-        navigate('/login')
-    }
     return(  <main>
 
     <section className="banner-registro">
@@ -22,7 +17,7 @@ function Registro(){
           <p className="frase-cursiva">Regístrate y disfruta de nuestros beneficios y una experiencia más rápida y sencilla.</p>
         </div>
 
-        <form id="formRegistro" noValidate onSubmit={registrarme}>
+        <form id="formRegistro" noValidate>
        
           <div className="campo">
             <label for="correo">Correo Electronico:</label>

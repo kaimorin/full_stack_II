@@ -2262,7 +2262,7 @@ input[type="radio"]:checked + .circulo-check::after {
     font-weight: 900;
     margin: 0;
     line-height: 1;
-    color: #10b981;
+    color:#0d4638;
     letter-spacing: -2px;
   }
 
@@ -2282,7 +2282,7 @@ input[type="radio"]:checked + .circulo-check::after {
 
   .btn-verde {
     display: inline-block;
-    background-color: #10b981;
+    background-color: #0d4638;
     color: #ffffff;
     font-weight: 600;
     font-size: 1rem;

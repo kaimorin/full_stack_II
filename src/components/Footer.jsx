@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router'
 import imgWs from '../assets/ws.png';
 import ig from '../assets/ig.png'
 import fb from '../assets/fb.png'
@@ -9,7 +9,7 @@ function Footer() {
       <div className="footer-izq">
         <h3 className="titulo-cambio">Estas Listo para el Cambio?</h3>
         <p>Estamos preparados para empezar!!!</p>
-        <a href="registro.html" className="btn-agenda-oscuro">Agenda Ahora</a>
+        <Link to="reserva/datos" className="btn-agenda-oscuro">Agenda Ahora</Link>
       </div>
 
       <div className="footer-der">

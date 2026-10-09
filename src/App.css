@@ -2244,60 +2244,66 @@ input[type="radio"]:checked + .circulo-check::after {
   .buscador-admin input {
     width: 100%;
   }
+  /* ===== calendario y reloj funcionales ===== */
+.cal-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
-/* ================= VISTA ERROR ================= */
-.error {
-  text-align: center;
-  background-color: #ffffff;
-  padding: 3rem 2rem;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
-  max-width: 480px;
-  width: 100%;
-  margin: 0 auto;
+.cal-nav button {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #2a5a25;
+  padding: 0 0.6rem;
+}
 
-  h1 {
-    font-size: 6rem;
-    font-weight: 900;
-    margin: 0;
-    line-height: 1;
-    color:#0d4638;
-    letter-spacing: -2px;
-  }
+.cal-matriz-numeros span {
+  padding: 0.35rem 0;
+}
 
-  h2 {
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: #1e293b;
-    margin: 1rem 0 0.5rem 0;
-  }
+.cal-dia {
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  padding: 0.35rem 0;
+  border-radius: 50%;
+}
 
-  p {
-    font-size: 1rem;
-    color: #64748b;
-    margin-bottom: 2rem;
-    line-height: 1.5;
-  }
+.cal-dia:hover:not(:disabled):not(.dia-marcado) {
+  background: #c9e2b9;
+}
 
-  .btn-verde {
-    display: inline-block;
-    background-color: #0d4638;
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+.cal-dia.dia-marcado {
+  background: #2a5a25;
+  color: #fff;
+}
 
-    &:hover {
-      background-color: #059669;
-      transform: translateY(-1px);
-    }
+.cal-dia:disabled {
+  color: #bbb;
+  cursor: not-allowed;
+}
 
-    &:active {
-      transform: translateY(0);
-    }
-  }
+.btn-cal-hoy {
+  background: none;
+  border: none;
+  color: #2a5a25;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.op-rueda {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
 }

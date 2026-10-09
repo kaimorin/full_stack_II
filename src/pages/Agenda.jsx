@@ -39,12 +39,12 @@ function Agenda() {
   const [ampm, setAmpm] = useState('AM')
   const [error, setError] = useState('')
 
-  // Textos formateados
+
   const horaTexto = `${hora}:${String(minuto).padStart(2, '0')} ${ampm}`
   const fechaCorta = `${MESES[fecha.getMonth()].slice(0, 3)} ${fecha.getDate()}, ${fecha.getFullYear()}`
   const fechaLarga = `${DIAS[fecha.getDay()]}, ${fecha.getDate()} de ${MESES[fecha.getMonth()].toLowerCase()} de ${fecha.getFullYear()}`
 
-  // Celdas del calendario para el mes seleccionado
+ 
   const primerDiaSemana = new Date(anio, mes, 1).getDay()
   const diasDelMes = new Date(anio, mes + 1, 0).getDate()
   const diasMesAnterior = new Date(anio, mes, 0).getDate()

@@ -2244,7 +2244,6 @@ input[type="radio"]:checked + .circulo-check::after {
   .buscador-admin input {
     width: 100%;
   }
-<<<<<<< HEAD
   /* ===== calendario y reloj funcionales ===== */
 .cal-nav {
   display: flex;
@@ -2307,7 +2306,6 @@ input[type="radio"]:checked + .circulo-check::after {
   font: inherit;
   cursor: pointer;
 }
-=======
 }
 
 /* ================= VISTA ERROR ================= */
@@ -2364,5 +2362,4 @@ input[type="radio"]:checked + .circulo-check::after {
       transform: translateY(0);
     }
   }
->>>>>>> 5ed8e7b179f31082e8a7cf1bc534b1ac3072e3b2
 }

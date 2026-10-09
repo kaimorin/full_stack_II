@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { Link, useLocation } from 'react-router'
 import fotoFamiliar from '../assets/familia.jpg'
 import fotoPeso from '../assets/servicio-peso.jpg'
 import fotoInfantil from '../assets/servicio-infantil.jpg'
@@ -7,6 +9,12 @@ import fotoMaximo from '../assets/pro-maximo.jpg'
 import ye from '../assets/drwest.jpg'
 
 function Home() {
+    const location = useLocation()
+    useEffect(() => {
+        if (location.hash) {
+            document.getElementById(location.hash.slice(1))?.scrollIntoView()
+        }
+    }, [location])
     return(<main>
     <section className="hero">
       <div className="hero-info">

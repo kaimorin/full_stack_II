@@ -1,4 +1,4 @@
-import{Link, NavLink} from 'react-router'
+import { Link } from 'react-router'
 
 function Header() {
   return (
@@ -6,14 +6,14 @@ function Header() {
     <Link to="/" className="logo">NUTRIVIDA</Link>
     <nav className="nav">
       <ul>
-        <li><NavLink to="/servicios">Servicios</NavLink></li>
+        <li><Link to="/#servicios">Servicios</Link></li>
         <li className="separador">|</li>
-        <li><NavLink to="/profesionales">Profesionales</NavLink></li>
+        <li><Link to="/#profesionales">Profesionales</Link></li>
         <li className="separador">|</li>
-        <li><NavLink to="/registro">Mi Salud</NavLink></li>
+        <li><Link to="/registro">Mi Salud</Link></li>
       </ul>
     </nav>
-    <Link to="/agenda" className="btn-agenda">Agenda ahora</Link>
+    <Link to="reserva/datos" className="btn-agenda">Agenda ahora</Link>
   </header>
   )
 }

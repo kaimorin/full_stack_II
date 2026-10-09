@@ -1,13 +1,7 @@
-import { Link, useNavigate } from 'react-router'
+import { Link } from 'react-router'
 import bannerLogin from '../assets/banner-login.jpg'
 
 function Login() {
-    const navigate = useNavigate()
-
-    function ingresar(e) {
-        e.preventDefault()
-        navigate('/perfil')
-    }
     return(<main>
     
     <section className="banner-login">
@@ -24,10 +18,10 @@ function Login() {
           <p className="subtitulo-login">Inicia sesion usando tu correo electronico y contraseña.</p>
         </div>
 
-        <form id="formLogin" noValidate onSubmit={ingresar}>
+        <form id="formLogin" noValidate>
           
           <div className="campo">
-            <label htmlhtmlFor="login-correo">Correo Electronico</label>
+            <label htmlFor="login-correo">Correo Electronico</label>
             <div className="input-con-icono">
               <input type="email" id="login-correo" placeholder="MarisolJimenez@gmail.com"/>
               <span className="icono-campo">

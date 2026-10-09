@@ -14,6 +14,7 @@ import NotFound from './pages/NotFound.jsx'
 import Agenda from './pages/Agenda.jsx'
 import Datos from './pages/Datos.jsx'
 import Pago from './pages/Pago.jsx'
+import Confirmacion from './pages/Confirmacion.jsx'
 // pages admin
 import Dashboard from './pages/Dashboard.jsx'
 import CitasHorario from './pages/CitasHorario.jsx'
@@ -40,6 +41,8 @@ export default function App() {
         <Route path="agenda" element={<Agenda />} />
         <Route path="datos" element={<Datos />} />
         <Route path="pago" element={<Pago />} />
+        <Route path="confirmacion" element={<Confirmacion />} />
+        
       </Route>
 
       {/* panel admin */}

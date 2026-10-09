@@ -41,8 +41,8 @@ function Pago() {
           </label>
 
           <div className="fila-botones-pago">
-            <Link to="/confirmacion" className="btn-pagar">Pagar</Link>
-            <Link to="/agenda" className="btn-volver-pago">Volver</Link>
+            <Link to="/reserva/confirmacion" className="btn-pagar">Pagar</Link>
+            <Link to="/reserva/agenda" className="btn-volver-pago">Volver</Link>
           </div>
         </div>
 

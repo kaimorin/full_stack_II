@@ -1,8 +1,24 @@
+import { Link, useNavigate } from 'react-router'
+import banner from '../assets/banner-agenda.jpg'
+
 function Agenda() {
+    const navigate = useNavigate()
+
+    function siguiente(e) {
+        e.preventDefault()
+        const datos = new FormData(e.currentTarget)
+        const cita = {
+            doctor: datos.get('doctor'),
+            modalidad: datos.get('modalidad'),
+            especialidad: datos.get('especialidad'),
+        }
+        sessionStorage.setItem('cita', JSON.stringify(cita))
+        navigate('/reserva/pago')
+    }
     return(<main>
     
     <section className="banner-agenda">
-      <img src="assets/imagenes/banner-agenda.jpg" alt="Calendario" className="img-banner-agenda"/>
+      <img src={banner} alt="Calendario" className="img-banner-agenda"/>
     </section>
 
     
@@ -16,11 +32,11 @@ function Agenda() {
     <section className="contenedor-agenda">
       
       
-      <form id="formAgenda" className="columna-doctores">
+      <form id="formAgenda" className="columna-doctores" onSubmit={siguiente}>
         
         
         <label className="tarjeta-radio-doc">
-          <input type="radio" name="doctor" value="Maria de Judas" checked/>
+          <input type="radio" name="doctor" value="Maria de Judas" defaultchecked/>
           <div className="circulo-check"></div>
           <div className="info-doc">
             <strong>Maria de Judas</strong>
@@ -61,7 +77,7 @@ function Agenda() {
       
         <div className="fila-modalidad">
           <label className="tarjeta-radio-modalidad">
-            <input type="radio" name="modalidad" value="Presencial" checked/>
+            <input type="radio" name="modalidad" value="Presencial" defaultchecked/>
             <div className="circulo-check"></div>
             <span>Presencial</span>
           </label>
@@ -75,8 +91,8 @@ function Agenda() {
 
        
         <div className="campo-select-esp">
-          <select id="selectEspecialidad" required>
-            <option value="" disabled selected>Especialidad...</option>
+          <select id="selectEspecialidad" name="especialidad" defaultValue="" required>
+            <option value="" disabled>Especialidad...</option>
             <option value="nutricion-clinica">Nutrición Clínica</option>
             <option value="nutricion-deportiva">Nutrición Deportiva</option>
             <option value="salud-digestiva">Salud Digestiva</option>
@@ -86,8 +102,8 @@ function Agenda() {
 
         
         <div className="fila-botones-paso">
-          <button type="button" className="btn-siguiente-paso" id="btnSiguientePaso">Siguiente</button>
-          <a href="registro.html" className="btn-volver-paso">Volver</a>
+          <button type="submit" className="btn-siguiente-paso" id="btnSiguientePaso">Siguiente</button>
+          <Link to="/reserva/datos" className="btn-volver-paso">Volver</Link>
         </div>
       </form>
 

@@ -11,10 +11,15 @@ import ye from '../assets/drwest.jpg'
 function Home() {
     const location = useLocation()
     useEffect(() => {
-        if (location.hash) {
-            document.getElementById(location.hash.slice(1))?.scrollIntoView()
-        }
+        const id = location.state?.ir
+        if (id) document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
     }, [location])
+
+    function irA(e, id) {
+        e.preventDefault()
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    }
+
     return(<main>
     <section className="hero">
       <div className="hero-info">

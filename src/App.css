@@ -2306,4 +2306,61 @@ input[type="radio"]:checked + .circulo-check::after {
   font: inherit;
   cursor: pointer;
 }
+
+/* Menu movil */
+
+.menu-movil {
+  display: none;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 22px;
+}
+
+/* Moviles y tablets */
+
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+
+  .menu-movil {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    width: 100%;
+  }
+
+  .nav.nav-abierto {
+    display: block;
+  }
+
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .nav ul li {
+    list-style: none;
+    padding: 10px;
+  }
+
+  .nav .separador {
+    display: none;
+  }
+
+  .nav a {
+    display: block;
+  }
+
+  .btn-agenda {
+    margin-top: 10px;
+  }
+}
+
 }

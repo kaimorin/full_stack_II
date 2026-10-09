@@ -2307,3 +2307,59 @@ input[type="radio"]:checked + .circulo-check::after {
   cursor: pointer;
 }
 }
+
+/* ================= VISTA ERROR ================= */
+.error {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 6rem;
+    font-weight: 900;
+    margin: 0;
+    line-height: 1;
+    color:#0d4638;
+    letter-spacing: -2px;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 1rem 0 0.5rem 0;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #64748b;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
+
+  .btn-verde {
+    display: inline-block;
+    background-color: #0d4638;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+
+    &:hover {
+      background-color: #059669;
+      transform: translateY(-1px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}

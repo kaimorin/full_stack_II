@@ -25,7 +25,7 @@ function Registro(){
         <form id="formRegistro" noValidate onSubmit={registrarme}>
        
           <div className="campo">
-            <label for="correo">Correo Electronico:</label>
+            <label htmlFor="correo">Correo Electronico:</label>
             <input type="email" id="correo" placeholder="xxxxxxxxxxxxxxx@hotmail.com*"/>
             <span className="error-texto" id="err-correo"></span>
           </div>
@@ -33,12 +33,12 @@ function Registro(){
        
           <div className="fila-dos-campos">
             <div className="campo">
-              <label for="reg-nombre">Nombre:</label>
+              <label htmlFor="reg-nombre">Nombre:</label>
               <input type="text" id="reg-nombre" placeholder="Nombre*"/>
               <span className="error-texto" id="err-nombre"></span>
             </div>
             <div className="campo">
-              <label for="reg-apellido">Apellido:</label>
+              <label htmlFor="reg-apellido">Apellido:</label>
               <input type="text" id="reg-apellido" placeholder="Apellido*"/>
               <span className="error-texto" id="err-apellido"></span>
             </div>
@@ -47,7 +47,7 @@ function Registro(){
      
           <div className="fila-dos-campos">
             <div className="campo">
-              <label for="reg-telefono">Numero tel:</label>
+              <label htmlFor="reg-telefono">Numero tel:</label>
               <div className="input-prefijo-tel">
                 <span className="prefijo">+56 9</span>
                 <input type="tel" id="reg-telefono" placeholder="xxxxxxxxx"/>
@@ -55,7 +55,7 @@ function Registro(){
               <span className="error-texto" id="err-telefono"></span>
             </div>
             <div className="campo">
-              <label for="reg-rut">RUT:</label>
+              <label htmlFor="reg-rut">RUT:</label>
               <input type="text" id="reg-rut" placeholder="12.345.678-9*"/>
               <span className="error-texto" id="err-rut"></span>
             </div>
@@ -64,12 +64,12 @@ function Registro(){
   
           <div className="fila-dos-campos">
             <div className="campo">
-              <label for="clave">Contraseña:</label>
+              <label htmlFor="clave">Contraseña:</label>
               <input type="password" id="clave" placeholder="**************"/>
               <span className="error-texto" id="err-clave"></span>
             </div>
             <div className="campo">
-              <label for="repetirClave">Repetir Contraseña:</label>
+              <label htmlFor="repetirClave">Repetir Contraseña:</label>
               <input type="password" id="repetirClave" placeholder="**************"/>
               <span className="error-texto" id="err-repetir"></span>
             </div>
@@ -81,7 +81,7 @@ function Registro(){
       
           <div className="campo-check">
             <input type="checkbox" id="checkNoticias"/>
-            <label for="checkNoticias">Deseo recibir noticias y actualizaciones.</label>
+            <label htmlFor="checkNoticias">Deseo recibir noticias y actualizaciones.</label>
           </div>
 
     

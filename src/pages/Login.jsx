@@ -1,8 +1,17 @@
+import { Link, useNavigate } from 'react-router'
+import bannerLogin from '../assets/banner-login.jpg'
+
 function Login() {
+    const navigate = useNavigate()
+
+    function ingresar(e) {
+        e.preventDefault()
+        navigate('/perfil')
+    }
     return(<main>
     
     <section className="banner-login">
-      <img src="assets/imagenes/banner-login.jpg" alt="Doctor" className="img-banner-fondo"/>
+      <img src={bannerLogin} alt="Doctor" className="img-banner-fondo"/>
       <h1 className="banner-titulo-login">Inicia Sesion</h1>
     </section>
 
@@ -15,14 +24,14 @@ function Login() {
           <p className="subtitulo-login">Inicia sesion usando tu correo electronico y contraseña.</p>
         </div>
 
-        <form id="formLogin" novalidate>
+        <form id="formLogin" noValidate onSubmit={ingresar}>
           
           <div className="campo">
-            <label for="login-correo">Correo Electronico</label>
+            <label htmlhtmlFor="login-correo">Correo Electronico</label>
             <div className="input-con-icono">
               <input type="email" id="login-correo" placeholder="MarisolJimenez@gmail.com"/>
               <span className="icono-campo">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#777" stroke-width="1.8">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#777" strokeWidth="1.8">
                   <rect x="2" y="4" width="20" height="16" rx="2"></rect>
                   <path d="M22 6l-10 7L2 6"></path>
                 </svg>
@@ -33,11 +42,11 @@ function Login() {
 
           
           <div className="campo">
-            <label for="login-clave">Contraseña</label>
+            <label htmlFor="login-clave">Contraseña</label>
             <div className="input-con-icono">
               <input type="password" id="login-clave" placeholder="*************************"/>
               <span className="icono-campo">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#777" stroke-width="1.8">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#777" strokeWidth="1.8">
                   <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                   <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                 </svg>
@@ -47,7 +56,7 @@ function Login() {
           </div>
 
          
-          <a href="#" className="link-olvido-negrita">¿Has Olvidado tu contraseña?</a>
+          <a href="#" className="link-olvido-negrita" onClick={(e) => e.preventDefault()}>¿Has Olvidado tu contraseña?</a>
 
          
           <div className="fila-switch">
@@ -74,7 +83,7 @@ function Login() {
 
           
           <div className="pie-login-registro">
-            <p>No tienes una Cuenta? Registrate <a href="registro.html">aquí</a></p>
+            <p>No tienes una Cuenta? Registrate <Link to="/registro">aquí</Link></p>
           </div>
         </form>
 

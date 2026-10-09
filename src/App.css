@@ -2244,4 +2244,66 @@ input[type="radio"]:checked + .circulo-check::after {
   .buscador-admin input {
     width: 100%;
   }
+  /* ===== calendario y reloj funcionales ===== */
+.cal-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.cal-nav button {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #2a5a25;
+  padding: 0 0.6rem;
+}
+
+.cal-matriz-numeros span {
+  padding: 0.35rem 0;
+}
+
+.cal-dia {
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  padding: 0.35rem 0;
+  border-radius: 50%;
+}
+
+.cal-dia:hover:not(:disabled):not(.dia-marcado) {
+  background: #c9e2b9;
+}
+
+.cal-dia.dia-marcado {
+  background: #2a5a25;
+  color: #fff;
+}
+
+.cal-dia:disabled {
+  color: #bbb;
+  cursor: not-allowed;
+}
+
+.btn-cal-hoy {
+  background: none;
+  border: none;
+  color: #2a5a25;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.op-rueda {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
 }

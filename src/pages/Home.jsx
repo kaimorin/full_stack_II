@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router'
 import fotoFamiliar from '../assets/familia.jpg'
 import fotoPeso from '../assets/servicio-peso.jpg'
@@ -7,6 +7,7 @@ import fotoDeporte from '../assets/servicio-deporte.jpg'
 import fotoMaria from '../assets/pro-maria.jpg'
 import fotoMaximo from '../assets/pro-maximo.jpg'
 import ye from '../assets/drwest.jpg'
+
 
 function Home() {
     const location = useLocation()

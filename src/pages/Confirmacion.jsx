@@ -1,4 +1,5 @@
 import { Link } from 'react-router'
+import bannere from '../assets/banner-exito.jpg'
 
 function Confirmacion() {
   const citaGuardada = sessionStorage.getItem('cita')
@@ -11,7 +12,7 @@ function Confirmacion() {
   return (
     <main>
       <section className="banner-confirmacion">
-        <img src="assets/imagenes/banner-exito.jpg" alt="Confirmación exitosa" />
+        <img src={bannere} alt="Calendario" className="img-banner-exito" />
       </section>
 
       <section className="seccion-confirmacion">

@@ -3,6 +3,9 @@ import { render, screen } from '@testing-library/react'
 import { MemoryRouter, useNavigate } from 'react-router'
 import userEvent from '@testing-library/user-event'
 import Header from './Header.jsx'
+import { scrollSuave } from '../utils/scrollSuave.js'
+
+vi.mock('../utils/scrollSuave.js')
 
 // Mock de react-router para capturar y controlar la función navigate
 vi.mock('react-router', async (importOriginal) => {
@@ -59,7 +62,7 @@ describe('Header', () => {
     await userEvent.click(enlaceServicios)
 
     // Comprobamos que ejecute el scroll nativo sobre el div ficticio
-    expect(seccionServicios.scrollIntoView).toHaveBeenCalledWith({ behavior: 'smooth' })
+    expect(scrollSuave).toHaveBeenCalledWith('servicios')
 
     document.body.removeChild(seccionServicios)
   })

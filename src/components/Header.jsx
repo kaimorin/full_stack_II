@@ -1,14 +1,19 @@
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router'
+import { Link, useLocation, useNavigate } from 'react-router'
+import { scrollSuave } from '../utils/scrollSuave.js'
 
 function Header() {
   const [menuAbierto, setMenuAbierto] = useState(false)
   const navigate = useNavigate()
-
+  const location = useLocation()
   function irA(id) {
-    setMenuAbierto(false)
+  setMenuAbierto(false)
+  if (location.pathname === '/') {
+    scrollSuave(id)
+  } else {
     navigate('/', { state: { ir: id } })
   }
+}
 
   return (
     <header className="header">

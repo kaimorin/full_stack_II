@@ -2244,7 +2244,8 @@ input[type="radio"]:checked + .circulo-check::after {
   .buscador-admin input {
     width: 100%;
   }
-  /* ===== calendario y reloj funcionales ===== */
+}  
+/* ===== calendario y reloj funcionales ===== */
 .cal-nav {
   display: flex;
   justify-content: space-between;
@@ -2363,4 +2364,3 @@ input[type="radio"]:checked + .circulo-check::after {
   }
 }
 
-}
